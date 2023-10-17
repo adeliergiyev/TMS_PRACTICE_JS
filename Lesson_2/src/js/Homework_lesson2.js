@@ -221,9 +221,9 @@ console.log("-- Advanced Level. Task 1: --");
 let aAdv = 4,
     bAdv = 3;
 
-aAdv = aAdv + bAdv; //a = a + b (a = 4 + 3 = 7;)
+aAdv += bAdv; //a = a + b (a = 4 + 3 = 7;)
 bAdv = aAdv - bAdv; //b = a — b (b = 7(a) - 3(b) = 4;)
-aAdv = aAdv - bAdv; //a = a — b (a = 7(a) - 4(b) = 3;)
+aAdv -= bAdv; //a = a — b (a = 7(a) - 4(b) = 3;)
 
 console.log(`'aAdv' = ${aAdv}, 'bAdv' = ${bAdv}`);
 
