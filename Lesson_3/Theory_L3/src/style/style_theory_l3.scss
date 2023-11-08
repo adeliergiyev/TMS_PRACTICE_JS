@@ -1,0 +1,60 @@
+.script__redColumn{
+    color: red;
+    border: 1px solid #000;
+    max-width: 15%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #aba4a4;
+    font-size: 24px;
+    font-weight: 700;
+    &_summ{
+        background-color: #eded00;
+        color: #000;
+        border: 1px solid #000;
+        max-width: 15%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 900;
+    }
+    &-title{
+        background-color: #8200ed;
+        color: #ffffff;
+        border: 2px solid #000;
+        max-width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 26px;
+        font-weight: 900;
+    }
+    &-iteration{
+        color: rgb(2, 2, 2);
+        border: 1px solid #000;
+        max-width: 30%;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #0ceb4f;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    &-iteration:hover{
+        transform: scale(1.4);
+        transition: 2s;
+    }
+    &-numbers{
+        background-color: #e67a06;
+        color: #000;
+        border: 1px solid #000;
+        max-width: 30%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 900;
+    }
+}
+.script__table-task12{
+    border: 2px solid #fff;
+    min-height: auto;
+    margin: 10px;
+    max-width: 10%;
+}
