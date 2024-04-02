@@ -156,6 +156,33 @@ console.log("");
 console.log("Task 7:");
 document.write("<h2 class = 'script__redColumn-title'>Task" + " " + ++t + "</h2><br>");
 
+const   sideNorth = "North",
+        sideEast = "East",
+        sideWest = "West",
+        sideSouth = "South";
+
+let sideWorld = prompt("Please, enter side of the Worlds: " + sideNorth + ", " + sideEast + ", " + sideWest + " or " + sideSouth);
+console.log(sideWorld + typeof(sideWorld));
+
+switch (sideWorld) {
+    case sideNorth: 
+        console.log("You selected North!");
+        break;
+    case sideEast: 
+        console.log("You selected East!");
+        break;
+    case sideWest: 
+        console.log("You selected West!");
+        break;
+    case sideSouth: 
+        console.log("You selected South!");
+        break;
+    default:
+    //!sideNorth || !sideEast || !sideWest || !sideSouth: 
+        console.log("Try again!");
+        break;
+}
+
 //#### ADVANCED level
 
 //#### Task.1
