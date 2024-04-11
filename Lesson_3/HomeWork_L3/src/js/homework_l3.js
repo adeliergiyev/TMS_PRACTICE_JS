@@ -187,6 +187,36 @@ switch (sideWorld) {
 
 //#### Task.1
 //Запустите цикл, в котором пользователю предлагается вводить число с клавиатуры, до тех пор, пока не будет введена пустая строка или 0. После выхода из цикла выведите общую сумму и среднее• арифметическое введённых чисел. • Если пользователь ввел не число, то вывести сообщение об ошибке Евода. При подсчете учесть, что пользователь может ввести отрицательное значение. 
+console.log("");
+console.log("ADVANCED Task 1:");
+document.write("<h2 class = 'script__redColumn-title'>ADVANCED Task" + " " + (++t - 7) + "</h2><br>");
+
+let TotalSum = 0;
+let AverageNumbers = 0;
+let numberFromUser = 0;
+let countIteretion = 1;
+
+for (let i = 1; i < 1000; i++) {
+    numberFromUser = +prompt("Hey, enter please some number more then 0: ", 0);
+    if (numberFromUser) {
+        TotalSum = TotalSum + numberFromUser;
+        countIteretion = i;
+        console.log("Total Sum: " + "[" + i + "]" + TotalSum);
+    } else if (numberFromUser === 0) {
+        alert("You Entered 0 or EMPTY value, program are stopped");
+        break;
+    } else if (!numberFromUser) {
+        alert("You Entered Incorrect Value, please enter number");
+        i--;
+        continue;
+    }
+}
+
+AverageNumbers = TotalSum / countIteretion;
+
+alert(`Total Sum = ${TotalSum}, 
+Average Numbers = ${AverageNumbers}`);
+
 
 //#### Task.2
 //Написать программу, которая выполняет следующие операции:
@@ -196,6 +226,41 @@ switch (sideWorld) {
 //  • Сколько отнять / прибавить / умножить / разделить от предыдущего результата?
 //3. По окончании вывести пользователю ** alert* **, содержащий формулу и результат например:
 //  > ((((6 - 10) + 5) * 20) / 2 = 110)
+console.log("");
+console.log("ADVANCED Task 2:");
+document.write("<h2 class = 'script__redColumn-title'>ADVANCED Task" + " " + (++t - 7) + "</h2><br>");
+
+let changeNumber;
+let newNumber;
+let subtractNumber,
+    addNumber,
+    multiplyNumber,
+    divideNumber;
+
+let firstNumber = +prompt("Please enter some FIRST NUMBER:");
+console.log("First Number: " + firstNumber);
+
+for (let i = 1; i < 5; i++) {
+    if (firstNumber){
+        changeNumber = +prompt("How much to subtract/add/multiply/divide from the previous result?: ");
+        if (i === 1) {
+            subtractNumber = firstNumber - changeNumber;
+            console.log("Subtract Number: " + " [" + i + "] " + subtractNumber);
+        } else if (i === 2) {
+            addNumber = subtractNumber + changeNumber;
+            console.log("Add Number: " + " [" + i + "] " + addNumber);
+        } else if (i === 3) {
+            multiplyNumber = addNumber * changeNumber;
+            console.log("Multiply Number: " + " [" + i + "] " + multiplyNumber);
+        } else if (i === 4) {
+            divideNumber = multiplyNumber / changeNumber;
+            console.log("Divide Number: " + " [" + i + "] " + divideNumber);
+            newNumber = divideNumber;
+            break;
+        }
+    } 
+}
+alert(`((((${firstNumber} - ${firstNumber - subtractNumber}) + ${addNumber - subtractNumber}) * ${multiplyNumber / addNumber}) / ${changeNumber} = ${newNumber})`);
 
 //#### Task.3
 // Написать программу, которая будет выводить в консоль лесенку.
@@ -210,3 +275,18 @@ switch (sideWorld) {
 */
 
 // > Не забудьте вопспользоваться циклами
+
+console.log("");
+console.log("ADVANCED Task 3:");
+document.write("<h2 class = 'script__redColumn-title'>ADVANCED Task" + " " + (++t - 7) + "</h2><br>");
+
+let step = "#"; 
+let a = "#";
+let b = "<br>";
+
+for (let i = 0; i < 6; i++) {
+    document.write(`${(a) + b}`);
+    for (let j = 0; j < 1; j++) {
+        a = a + step;
+    }
+}
