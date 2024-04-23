@@ -191,7 +191,9 @@ console.log("");
 console.log("ADVANCED Task 1:");
 document.write("<h2 class = 'script__redColumn-title'>ADVANCED Task" + " " + (++t - 7) + "</h2><br>");
 
-let TotalSum = 0;
+/* !!!Change code. Make thrue the cycle - while () {}*/
+
+/*let TotalSum = 0;
 let AverageNumbers = 0;
 let numberFromUser = 0;
 let countIteretion = 1;
@@ -210,12 +212,31 @@ for (let i = 1; i < 1000; i++) {
         i--;
         continue;
     }
+}*/
+
+let sum = 0, number = 0, i = 0;
+
+while (true) {
+    number = +prompt("Hey, enter please some NUMBER more THEN 0: ", 0);
+    
+    console.log("NUMBER: " + number);
+
+    if (!number) {
+        if (isNaN(number)) {
+            alert("You Entered Incorrect Value, please enter number");
+            continue;
+        } 
+        alert("You Entered 0 or EMPTY value, program are stopped");
+        break;
+    } else {
+    sum += number;
+    i++;
+    console.log("Total Sum: " + "[" + i + "]" + sum);
+    } 
 }
 
-AverageNumbers = TotalSum / countIteretion;
-
-alert(`Total Sum = ${TotalSum}, 
-Average Numbers = ${AverageNumbers}`);
+alert(`Total Sum = ${sum}, 
+Average Numbers = ${sum / i}`);
 
 
 //#### Task.2
