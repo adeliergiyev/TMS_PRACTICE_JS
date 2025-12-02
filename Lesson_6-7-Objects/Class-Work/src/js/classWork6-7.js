@@ -22,4 +22,4 @@ const iphone = {
     }
 }
 
-console.table(iphone);
+console.table(iphone.color);
