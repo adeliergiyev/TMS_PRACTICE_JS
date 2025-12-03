@@ -22,7 +22,7 @@ const iphone = {
     }
 }
 
-console.table(iphone.color);
+console.table(iphone.color); // black
 
 
 //Example 3: 
@@ -40,6 +40,19 @@ const iphonePro = {
     }
 }
 
-const objectKey = "height";
+const objectKey = "height"; 
 
-console.log("Object Key: " + iphonePro['height']);
+console.log("Object Key: " + iphonePro['height']); // 50 
+
+const iphoneObject = iphone; // new object
+
+console.table(iphone.color); // black
+
+iphone.color = "green"; // set gern color
+
+console.table(iphoneObject.color); // green
+
+const iphoneObjectConst = { ...iphone }; //new constant object
+
+console.table(iphoneObjectConst.color); // black
+
