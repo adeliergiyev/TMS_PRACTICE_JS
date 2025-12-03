@@ -23,3 +23,23 @@ const iphone = {
 }
 
 console.table(iphone.color);
+
+
+//Example 3: 
+
+
+const iphonePro = {
+    color: "white",
+    width: 30, 
+    height: 50,
+    weght: 900,
+    camera: {
+        count: 3,
+        model: "t100-samsung",
+        countPixels: 1000
+    }
+}
+
+const objectKey = "height";
+
+console.log("Object Key: " + iphonePro['height']);
