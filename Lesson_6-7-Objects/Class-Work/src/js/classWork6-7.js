@@ -76,6 +76,36 @@ console.log("iphoneProNew: " + iphoneProNew);
         console.log("iphonePro: " + iphonePro.camera.model);
         console.log("iphoneProNew: " + iphoneProNew.camera.model);
 
+//Example 5. Object contains property with function:
+
+        const enteredCity = ['Trebic', 'Paris', 'Rome', 'Bratislava', 'Kyiv'];
+
+        const company = {
+            name: "Nuvia",
+            size: "1000",
+            employee: 5000,
+            locationCity: function (city) {
+                const locationCity = city;
+                if (locationCity) {
+                    const fullLocation = [locationCity];
+                    return this.locationCountry(fullLocation);
+                }
+            },
+
+            locationCountry: function (fullLocation) {
+                let country;
+                if (fullLocation[0] === 'Trebic') {
+                    country = 'CZ';
+                } else {
+                    country = 'OTHER';
+                }
+                fullLocation.push(country);
+                return fullLocation;
+            }
+        };
+        const randomCity = Math.floor(Math.random() * enteredCity.length);
+        console.log("Location: " + company.locationCity(enteredCity[randomCity]));
+
 //Tasks.
 // 1. Проверьте, что этот объект не пустой и что в нем есть ключ age.
         const user = {
