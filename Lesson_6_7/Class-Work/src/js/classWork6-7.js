@@ -56,16 +56,16 @@ const iphoneObjectConst = { ...iphone }; //new constant object
 
 console.table(iphoneObjectConst.color); // black
 
-const iphoneProNew = { ...iphonePro,
+const  iphoneProNewObj1 = { ...iphonePro,
                         camera: {
                             ...iphonePro.model,
                         }
 };
 
-console.log("iphoneProNew: " + iphoneProNew);
+console.log("iphoneProNewObj1: " + iphoneProNewObj1);
 
         //Example 4. Copying objects with nested objects:
-        const iphoneProNew = { ...iphonePro,
+        const iphoneProNewObj2 = { ...iphonePro,
                                  camera: {
                                  ...iphonePro.camera,
             }
@@ -74,7 +74,7 @@ console.log("iphoneProNew: " + iphoneProNew);
         iphonePro.camera.model = "t200-apple";
 
         console.log("iphonePro: " + iphonePro.camera.model);
-        console.log("iphoneProNew: " + iphoneProNew.camera.model);
+        console.log("iphoneProNewObj2: " + iphoneProNewObj2.camera.model);
 
 //Example 5. Object contains property with function:
 
@@ -128,36 +128,6 @@ console.log("iphoneProNew: " + iphoneProNew);
                 }
             }
         }
-
-        //Example 5. Object contains property with function:
-
-        const enteredCity = ['Trebic', 'Paris', 'Rome', 'Bratislava', 'Kyiv'];
-
-        const company = {
-            name: "Nuvia",
-            size: "1000",
-            employee: 5000,
-            locationCity: function (city) {
-                const locationCity = city;
-                if (locationCity) {
-                    const fullLocation: any = [locationCity];
-                    return this.locationCountry(fullLocation);
-                }
-            },
-
-            locationCountry: function (fullLocation: any) {
-                let country: string;
-                if (fullLocation[0] === 'Trebic') {
-                    country = 'CZ';
-                } else {
-                    country = 'OTHER';
-                }
-                fullLocation.push(country);
-                return fullLocation;
-            }
-        };
-        const randomCity = Math.floor(Math.random() * enteredCity.length);
-        console.log("Location: " + company.locationCity(enteredCity[randomCity]));
 
         //HW-7-OBJ
         const userObject = {
