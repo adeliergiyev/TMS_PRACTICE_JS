@@ -1,6 +1,6 @@
 //Example 1: 
 //debugger;
-globalVariable = 1000;
+const globalVariable = 1000;
 
 let ternarnyOperator = globalVariable ? globalVariable : 200;
 
@@ -78,7 +78,9 @@ console.log("iphoneProNewObj1: " + iphoneProNewObj1);
 
 //Example 5. Object contains property with function:
 
+        
         const enteredCity = ['Trebic', 'Paris', 'Rome', 'Bratislava', 'Kyiv'];
+        export default enteredCity;
 
         const company = {
             name: "Nuvia",
@@ -208,6 +210,6 @@ console.log("iphoneProNewObj1: " + iphoneProNewObj1);
         }
         console.log("NEW STACK IS ADDED: " + JSON.stringify(newKeyAndValueScore, null, 2));
         console.log("REPEAT PLEASE: " + newKeyAndValueScore[newKeys[1]]);
-
+        console.log("-----------------------------------------------------------FINISH CLASS WORK 6 - 7------------------------------------------------------------")
 
 
