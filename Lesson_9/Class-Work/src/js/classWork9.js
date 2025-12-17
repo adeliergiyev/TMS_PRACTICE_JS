@@ -3,8 +3,12 @@ import enteredCity from '../../../../Lesson_6_7/Class-Work/src/js/classWork6-7.j
 
 console.log("--------------------------------------------------------------START CLASS WORK 9--------------------------------------------------------------");
 
-//CHAPTER #1. MASSIVES
+//CHAPTER #1. MASSIVES METHODS
 
+//arr.forEach
+//arr.map
+//arr.filter
+//arr.reduce
 
 
 //CHAPTER #2. CALLBACK FUNCTION
@@ -64,6 +68,10 @@ function getCountryFromCity(city) {
 //2.1. Massive forEach:
 const showCountries = enteredCity.forEach(getCountryFromCity);
 
+//ForEach + callback function
+//value = each element of arr; index = index of element in the arr; array = current array
+// array.forEach(callback(value, index, array), this);
+
 
 //2.2. setTimeout / setInterval
 
@@ -79,9 +87,35 @@ timeMethods();
 
 // 2.3 Arrow Functions
 
-const calcArrow = (a,b,c) => a + b +c;
+//Line type
+const calcArrowLine = (a,b,c) => a + b + c + (a + enteredCity.length); //Function name -> parameters -> body of function (automatically returning)
 
-setTimeout(() => document.querySelector('.item_one').innerHTML = calcArrow(a, a + a, a * a), 3000);
-setTimeout(() => document.querySelector('.item_two').innerHTML = calcArrow(a, a - a, a * a), 6000);
-setTimeout(() => document.querySelector('.item_three').innerHTML = calcArrow(a, a - a, a + a), 9000);
-setTimeout(() => document.querySelector('.item_four').innerHTML = calcArrow(a, a * a * 5, a - a), 12000);
+//Bloack type
+const calcArrowBlock = (a, b, c) => { //Function name -> parameters -> body of function
+    return (a + b) * c + enteredCity.length;
+}; 
+
+setTimeout(() => document.querySelector('.item_one').innerHTML = calcArrowLine(a, a + a, a * a), 3000);
+setTimeout(() => document.querySelector('.item_two').innerHTML = calcArrowBlock(a, a - a, a * a), 6000);
+setTimeout(() => document.querySelector('.item_three').innerHTML = calcArrowBlock(a, a - a, a + a), 9000);
+setTimeout(() => document.querySelector('.item_four').innerHTML = calcArrowLine(a, a * a * 5, a - a), 12000);
+
+
+//2.4 Closures in JavaScript
+
+function outer() {
+  let count = 0; //This varibale is available inside the function "inner()"
+
+  return function inner() { // Each time when this function is declarated, 
+    count++; //the count = 'previouse value OR beginning value in parent function', +1 
+    console.log(count); // show new "count" value
+  };
+}
+
+const counter = outer();
+counter(); // 1
+counter(); // 2
+counter(); // 3
+
+
+//
